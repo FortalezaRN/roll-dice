@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Titãs de Arton</title>
+
+		<link href="./node_modules/materialize-css/dist/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
+		<link href="./css/style.css" rel="stylesheet">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/4.12.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/4.12.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.12.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.12.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/4.12.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+		<script defer src="/__/firebase/init.js"></script>
+    <script defer src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  </head>
+  <body>		
+		<nav class="navPc">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo titulo">Titãs de Arton</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><img id="fotoPerfil"/></li>
+					<li class="logout"><i class="fas fa-sign-out-alt"></i></li>
+				</ul>
+			</div>
+		</nav>
+
+		<ul id="slide-out" class="sidenav">
+			<li class="background"><div class="user-view">
+				<div class="background">
+					<img src="img/rpg.png">
+				</div>
+			</div></li>
+			<li class="logout"><i class="fas fa-sign-out-alt"></i> Deslogar</li>
+		</ul>
+		<div class="cabecalho">
+			<div class="titulomobile">
+				<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<a href="#" class="brand-logo titulo">Titãs de Arton</a>					
+			</div>
+		</div>
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">Jogador: <span id="nome"> </span></div>
+					<div class="col s6">
+						<input id="nickname" placeholder="Coloque o nome do seu personagem:" type="text">
+					</div>
+					<div class="col s6">
+						<a id="save" class=" waves-effect waves-light btn s6"><i class="fas fa-save"></i>Salvar</a>
+						<a id="roll" class=" waves-effect blue darken-4 btn modal-trigger" href="#modal2"><i class="fas fa-gamepad"></i>Rolar Dados</a>
+					</div>
+					<table id="rolagens">
+						<thead>
+							<tr>
+									<th>Nick</th>
+									<th>Dado</th>
+									<th>Modificador</th>
+									<th>Valor</th>
+									<th>Horário</th>
+									<th>Shared</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<div id="modal2" class="modal modal-fixed-footer">
+				<div class="modal-content">
+					<h4>Rolagem de dados</h4>
+					<div class="container">
+						<div class="col 12">
+							<div class="row formulario">
+								<div class="input-field col s6">
+									<input id="qtd" type="number" class="validate">
+									<label for="qtd">Qtd's. de dados</label>
+								</div>
+								<div class="input-field col s6">
+									<input id="modificador" type="number" class="validate">
+									<label for="modificador">Modificador</label>
+								</div>
+							</div>
+						</div>
+						<div class="dado">
+							<div id="d4" class="dados"></div>
+							<div id="d6" class="dados"></div>
+							<div id="d8" class="dados"></div>
+							<div id="dP" class="dados"></div>
+							<div id="d10" class="dados"></div>
+							<div id="d12" class="dados"></div>
+							<div id="d20" class="dados"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fechar</a>
+				</div>
+			</div>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4>Faça o login</h4>
+				<button id="btnFacebook" class="btn waves-effect blue darken-4 btnFacebook" type="submit" name="action">
+					Conecte-se usando o facebook
+					<i class="fab fa-facebook left"></i>
+				</button>
+				<button id="btnGoogle" class="btn waves-effect red darken-4" type="submit" name="action">
+					Conecte-se usando um conta Google
+					<i class="fab fa-google-plus-g left"></i>
+				</button>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		</div>
+
+    <script defer src="./js/app.js"></script>
+  </body>
+</html>

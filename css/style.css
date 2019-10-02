@@ -1,0 +1,119 @@
+h2 {
+    text-align: center;
+}
+td, th{
+    text-align: center;
+}
+#modal2{
+    width: 92% !important;
+}
+.titulo{
+    padding-left: 20px !important;
+}
+.background{
+    height: 160px;
+}
+
+.cabecalho{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: #ee6e73;
+    padding-left: 20px;
+    display: none;
+}
+.sidenav-trigger{
+    color: white;
+}
+.material-icons{
+    font-size: 40px;
+}
+.titulomobile > .titulo{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: normal;
+    color: #FFF;
+    font-size: 40px;
+}
+
+.fa-save, .fa-gamepad{
+    padding-right: 8px;
+}
+.btnFacebook{
+    background-color: #3c6bb1;
+}
+
+.btnGoogle{
+    background-color: #dd4b39;
+}
+
+.whatsapp{
+    font-size: 20px;
+    color: green;
+}
+
+#nav-mobile{
+    padding-right: 20px;
+}
+
+.logout{
+    cursor: pointer;
+}
+
+.formulario{
+    margin-bottom: 0px;
+}
+.dado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 270px;
+}
+
+.dados{
+    margin: 3px 5px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+#d4{
+    background-image: url('../img/d4.png');
+}
+#d6{
+    background-image: url('../img/d6.png');
+}
+#d8{
+    background-image: url('../img/d8.png');
+}
+#d10{
+    background-image: url('../img/d10.png');
+}
+#dP{
+    background-image: url('../img/dP.png');
+}
+#d12{
+    background-image: url('../img/d12.png');
+}
+#d20{
+    background-image: url('../img/d20.png');
+}
+
+#fotoPerfil {
+    width: 40px;
+    margin-right: 20px;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+
+@media (max-width: 996px) 
+{
+  .navPc 
+   {
+    display: none;
+   }
+   .cabecalho{
+       display: block;
+   }
+}
