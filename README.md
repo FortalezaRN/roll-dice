@@ -1,0 +1,1 @@
+Site para rolar dados online com o firebase com o historico das rolagens
